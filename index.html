@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Foro</title>
+</head>
+<body>
+  <h1>Bienvenido a mi foro 💬</h1>
+
+  <input id="mensaje" placeholder="Escribe algo...">
+  <button onclick="enviar()">Enviar</button>
+
+  <ul id="chat"></ul>
+
+  <script>
+    function enviar() {
+      let texto = document.getElementById("mensaje").value;
+
+      let li = document.createElement("li");
+      li.textContent = texto;
+
+      document.getElementById("chat").appendChild(li);
+
+      document.getElementById("mensaje").value = "";
+    }
+  </script>
+</body>
+</html>
